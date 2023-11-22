@@ -4,56 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Your Portfolio</title>
+    <title>My Portfolio</title>
 </head>
 <body>
-
     <header>
-        <div class="container">
-            <h1>Your Name</h1>
-            <p>Web Developer</p>
+        <div class="logo">
+          My<span style="color: red;">Portfolio</span>
         </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Write a brief description about yourself here.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-
-            <div class="project">
-                <img src="project2.jpg" alt="Project 2">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
+    <section class="data">
+        <div class="section1" id="about">
+            <div class="logo">
+                <img src="img/Screenshot 2023-11-14 104334.png" alt="Portfolio Logo">
+            <div>
+                <h2>About Me</h2>
             </div>
         </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: linkedin.com/yourprofile</p>
-            <p>GitHub: github.com/yourusername</p>
+            <div class="about">
+                <h1>Ringkasan</h1>
+                <p>Hallo,Perkenalkan nama saya Erdi Eka Fazri,Umur saya 16 tahun saya lahir tanggal 11-11-2007,Tempat tinggal sekaligus tempat lahir saya yaitu BOGOR,Saya anak pertama dari 2 bersaudara,status saya sekarang adalah pelajar yang bersekolah di SMK Wikrama Bogor,Jurusan saya di sekolah yaitu PPLG(pengembangan perangkat lunak dan gim),Hobby saya adalah bermain basket.</p>
+            </div>
+        </div>
+    <section class="skil" id="projects">
+        <div class="container2">
+           <h1>My Skill</h1>
+        </div>
+<!-- NAH iye kunaon di jien div yang sama siga di bawah ajang misahkeun setiap 3 kotak -->
+<!-- DINOTE SEBENERNA BISA DIJADIKEUN SIGA NU MANEH BIE DI PISAH_PISAH TEU DI GABUNG SETIAP di DALAM div ada beberapa div, didefinisikeun di style.css. Cuman pasti panjang di stlye.css na -->
+        <div class="skill-container">
+            <div class="html">
+                <h3>HTML</h3>
+                <p>adalah bahasa yang digunakan untuk membuat halaman web. Bagi yang berkecimpung di dunia perangkat gadget dan ilmu komputer, pasti sudah tidak asing lagi dengan berbagai kode di dalamnya. HTML adalah kependekan dari Hypertext Markup Language.</p>
+            </div>
+            <div class="css">
+                <h3>CSS</h3>
+                <p>CSS adalah bahasa Cascading Style Sheet dan biasanya digunakan untuk mengatur elemen tampilan yang tertulis dalam bahasa markup, seperti HTML. CSS berfungsi untuk memisahkan konten dari tampilan visualnya di situs.</p>
+            </div>
+            <div class="js">
+                <h3>JAVASCRIPT</h3>
+                <p>JavaScript adalah bahasa pemrograman yang digunakan developer untuk membuat halaman web yang interaktif.</p>
+            </div>
+        </div>
+<!-- NAH iye kunaon di jien div yang sama siga di atas ajang misahkeun setiap 3 kotak -->
+        <div class="skill-container">
+            <div class="ruby">
+                <h3>RUBY</h3>
+                <p>adalah bahasa pemrograman berbasis skrip yang berorientasi pada objek. Ruby bersifat open source, biasanya digunakan untuk membangun dan mengembangkan aplikasi web yang sederhana dan cepat.</p>
+            </div>
+            <div class="phyton">
+                <h3>PYTHON</h3>
+                <p>Python adalah bahasa pemrograman yang banyak digunakan dalam aplikasi web, pengembangan perangkat lunak, ilmu data, dan machine learning (ML). Developer menggunakan Python karena efisien dan mudah dipelajari serta dapat dijalankan di berbagai platform. Perangkat lunak Python dapat diunduh secara gratis, terintegrasi baik dengan semua tipe sistem, dan meningkatkan kecepatan pengembangan.</p>
+            </div>
+            <div class="c">
+                <h3>C++</h3>
+                <p>adalah bahasa pemrograman komputer yang merupakan evolusi dari keluarga bahasa C yang sudah ada. Sebagai bahasa yang berorientasi pada objek yang memberikan struktur jelas pada program dan memungkinkan kode untuk digunakan ulang, C++ dapat menurunkan biaya pengembangan.</p>
+            </div>
         </div>
     </section>
-
+    <section class="ending" id="contact">
+        <div class="form">
+            <h1>Formulir Kontak</h1>
+            <form action="proses_formulir.php" method="post">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" required></textarea>
+    
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+    </section>
     <footer>
         <div class="container">
-            <p>&copy; 2023 Your Name. All rights reserved.</p>
+            <p>&copy; 2023 Erdi Eka Fazri. All rights reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
