@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>My Portfolio</title>
 </head>
 <body>
     <header>
         <div class="logo">
-          My<span style="color: red;">Portfolio</span>
+            My<span style="color: red;">Portfolio</span>
         </div>
         <nav>
+            <!-- Di Jero nav iye ku urang jien class deui ajang pas di buka di mobile/hp awal na aya 3 button jadi garis 3 -->
+            <!-- Maneh tinggali aya fucnt onclick, iye funct jang ngajalankeun event klick di javascript -->
+            <!-- Scroll ka handap aya script javascript na  -->
+            <div class="menu-icon" onclick="toggleMenu()"> 
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+                <li><a href="#kontak" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="data">
+    <section>
         <div class="section1" id="about">
-            <div class="logo">
-                <img src="img/Screenshot 2023-11-14 104334.png" alt="Portfolio Logo">
-            <div>
-                <h2>About Me</h2>
+            <div class="about-container">
+                <div class="logo">
+                    <img src="img/WhatsApp Image 2023-11-25 at 23.01.28.jpeg~" alt="Portfolio Logo">
+                </div>
+                <div class="about-content">
+                    <h1>Ringkasan</h1>
+                    <p>Hallo, perkenalkan nama saya Erdi Eka Fazri, Umur saya 16 tahun. Saya lahir tanggal 11-11-2007 di Bogor. Saya adalah anak pertama dari 2 bersaudara dan saat ini saya adalah pelajar di SMK Wikrama Bogor, jurusan PPLG (Pengembangan Perangkat Lunak dan Gim). Hobbi saya adalah bermain basket.</p>
+                </div>
             </div>
         </div>
-            <div class="about">
-                <h1>Ringkasan</h1>
-                <p>Hallo,Perkenalkan nama saya Erdi Eka Fazri,Umur saya 16 tahun saya lahir tanggal 11-11-2007,Tempat tinggal sekaligus tempat lahir saya yaitu BOGOR,Saya anak pertama dari 2 bersaudara,status saya sekarang adalah pelajar yang bersekolah di SMK Wikrama Bogor,Jurusan saya di sekolah yaitu PPLG(pengembangan perangkat lunak dan gim),Hobby saya adalah bermain basket.</p>
-            </div>
-        </div>
+    </section>
     <section class="skil" id="projects">
         <div class="container2">
            <h1>My Skill</h1>
@@ -69,27 +78,32 @@
             </div>
         </div>
     </section>
-    <section class="ending" id="contact">
-        <div class="form">
-            <h1>Formulir Kontak</h1>
-            <form action="proses_formulir.php" method="post">
-                <label for="nama">Nama:</label>
-                <input type="text" id="nama" name="nama" required>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-    
-                <label for="pesan">Pesan:</label>
-                <textarea id="pesan" name="pesan" required></textarea>
-    
-                <input type="submit" value="Kirim">
-            </form>
+
+    <div class="contact-container">
+        <div class="text" id="kontak">
+            <h2>From Contact</h2>
         </div>
-    </section>
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Erdi Eka Fazri. All rights reserved.</p>
-        </div>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
     </footer>
+    <!-- Tah iye script ajang nampilkeun 3 button mun iye eweh script kuduna nu 3 button eta moal muncul lamun garis 3 na di -->
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
